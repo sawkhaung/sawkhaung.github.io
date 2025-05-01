@@ -4,74 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>စောစိုးထက်ခေါင် - Hydroponic စိုက်ပျိုးရေး</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern Base Styles */
+        :root {
+            --primary: #2ecc71;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+        
+        @font-face {
+            font-family: 'Pyidaungsu';
+            src: local('Pyidaungsu'), local('Pyidaungsu Regular');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Header with animated gradient */
+        header {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0.3) 0%,
+                rgba(255,255,255,0) 60%
+            );
+            transform: rotate(30deg);
+            animation: shine 5s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: rotate(30deg) translate(-10%, -10%); }
+            100% { transform: rotate(30deg) translate(10%, 10%); }
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Profile card with floating effect */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+        }
+        
+        /* Hobbies list with animated icons */
+        .hobbies-list {
+            list-style: none;
+        }
+        
+        .hobbies-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hobbies-list li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .hobbies-list li:hover {
+            padding-left: 1rem;
+            color: var(--secondary);
+        }
+        
+        /* Footer with wave effect */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23ffffff'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>နေ့လည်ခင်းမှ ကြိုဆိုပါသည်!</h1>
+        <h1>မင်္ဂလာပါ စောစိုးထက်ခေါ်!</h1>
+        <p>Hydroponic စိုက်ပျိုးရေးနှင့် နည်းပညာများကို မျှဝေပါမည်</p>
     </header>
 
-    <section class="profile">
-        <h2>ကျွန်တော့်အကြောင်း</h2>
-        <p>ကျွန်တော်နာမည်က <strong>စောစိုးထက်ခေါင်</strong> ဖြစ်ပါတယ်။<br>
-           တောင်ကလေးဘုန်းတော်ကြီးသင် ပညာရေးကျောင်းမှာ ပညာသင်ယူနေပါတယ်။<br>
-           Hydroponic စိုက်ပျိုးရေးကို စိတ်ဝင်စားပြီး လေ့လာနေပါတယ်။</p>
-    </section>
+    <div class="container">
+        <section class="card profile">
+            <h2>ကျွန်တော့်အကြောင်း</h2>
+            <p>ကျွန်တော်နာမည်က <strong>စောစိုးထက်ခေါင်</strong> ဖြစ်ပါတယ်။<br>
+               တောင်ကလေးဘုန်းတော်ကြီးသင် ပညာရေးကျောင်းမှာ ပညာသင်ယူနေပါတယ်။<br>
+               Hydroponic စိုက်ပျိုးရေးကို စိတ်ဝင်စားပြီး လေ့လာနေပါတယ်။</p>
+        </section>
 
-    <section class="hobbies">
-        <h2>ကျွန်တော်ကြိုက်နှစ်သက်တာတွေ</h2>
-        <ul>
-            <li>သူငယ်ချင်းတွေနဲ့ ဂိမ်းဆော့တာ</li>
-            <li>ဘောလုံးကန်တာ</li>
-            <li>Hydroponic နည်းပညာလေ့လာတာ</li>
-        </ul>
-    </section>
+        <section class="card hobbies">
+            <h2>ကျွန်တော်ကြိုက်နှစ်သက်တာတွေ</h2>
+            <ul class="hobbies-list">
+                <li>သူငယ်ချင်းတွေနဲ့ ဂိမ်းဆော့တာ</li>
+                <li>ဘောလုံးကန်တာ</li>
+                <li>Hydroponic နည်းပညာလေ့လာတာ</li>
+                <li>သဘာဝပတ်ဝန်းကျင် ထိန်းသိမ်းရေး</li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
-        <p>ကျေးဇူးတင်ပါသည်! © 2024</p>
+        <p>ကျေးဇူးတင်ပါသည်! © 2024 စောစိုးထက်ခေါင်</p>
     </footer>
 </body>
-</html>/* အခြေခံပုံစံ */
-body {
-    font-family: "Pyidaungsu", "Noto Sans Myanmar", sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* ခေါင်းစီး */
-header {
-    background: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-/* ကိုယ်ရေးအချက်အလက် */
-.profile {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ဝါသနာ */
-.hobbies {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* အောက်ခြေ */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
-}
-
+</html>
