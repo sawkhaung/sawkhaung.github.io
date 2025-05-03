@@ -3,61 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saw Soe Htet Khaung - Hydroponic လမ်းညွှန်</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Saw Soe Htet Khaung - ကိုယ်ရေးအကျဉ်း</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         header {
-            background-color: #2c5f2d;
-            color: white;
             text-align: center;
             padding: 2rem;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .hydroponic-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #2c5f2d;
+            background-color: #2c3e50;
             color: white;
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         footer {
-            background-color: #2c5f2d;
+            background-color: #2c3e50;
             color: white;
             text-align: center;
             padding: 1rem;
@@ -69,76 +48,65 @@
         .social-links a {
             color: white;
             margin: 0 10px;
-            font-size: 24px;
+            font-size: 1.2em;
             text-decoration: none;
+        }
+
+        .hydroponic-formula {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Saw Soe Htet Khaung</h1>
+        <h1>စောစိုးထက်ခေါင်</h1>
         <p>တောင်ကလေးဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
-        <p>ဘော်လုံးကစားခြင်းနှင့် Hydroponic စိုက်ပျိုးနည်း ဝါသနာရှင်</p>
     </header>
 
-    <div class="content">
-        <div class="hydroponic-section">
-            <h2>Hydroponic စိုက်ပျိုးနည်း</h2>
-            <p>Hydroponic ဆိုတာ မြေမပါဘဲ ရေနဲ့အာဟာရဖြော်ရည်ကို အခြေခံတဲ့စိုက်ပျိုးနည်းပါ။ အပင်တွေကို အာဟာရပြည့်ဝတဲ့ဖြော်ရည်နဲ့ တိုက်ရိုက်ထောက်ပံ့ပေးပါတယ်။</p>
-            
-            <h3>NPK အတိုင်းအတာ</h3>
-            <table>
-                <tr>
-                    <th>အပင်အမျိုးအစား</th>
-                    <th>နိုက်ထရိုဂျင် (N)</th>
-                    <th>ဖော့စ်ဖရပ် (P)</th>
-                    <th>ပိုတက်စီယမ် (K)</th>
-                </tr>
-                <tr>
-                    <td>ဟင်းသီးဟင်းရွက်</td>
-                    <td>200-250 ppm</td>
-                    <td>50-80 ppm</td>
-                    <td>200-300 ppm</td>
-                </tr>
-                <tr>
-                    <td>အသီးပင်များ</td>
-                    <td>100-150 ppm</td>
-                    <td>50-80 ppm</td>
-                    <td>150-250 ppm</td>
-                </tr>
-                <tr>
-                    <td>အရွက်သုံးပင်</td>
-                    <td>250-300 ppm</td>
-                    <td>50-70 ppm</td>
-                    <td>300-400 ppm</td>
-                </tr>
-            </table>
-        </div>
+    <div class="container">
+        <section id="about">
+            <h2>ကျွန်တော်အကြောင်း</h2>
+            <p>ကျွန်တော်က ၉တန်းကျောင်းသား Saw Soe Htet Khaung ဖြစ်ပါတယ်။ ဘောလုံးကန်ရတာကို အရမ်းကြိုက်ပါတယ်။ စီးပွားရေးနဲ့ Hydroponic အပင်စိုက်ပျိုးနည်းတွေကို စိတ်ဝင်စားပါတယ်။</p>
+        </section>
+
+        <section id="hydroponic">
+            <h2>Hydroponic ဖော်မြူလာများ</h2>
+            <div class="hydroponic-formula">
+                <ol>
+                    <li>အာဟာရပျော်ရည် (Nutrient Solution) - NPK 20-20-20</li>
+                    <li>pH Level ထိန်းသိမ်းခြင်း (5.5 - 6.5 အတွင်း)</li>
+                    <li>အလင်းရောင်စနစ် (LED Grow Lights 12-16 နာရီ/တစ်နေ့)</li>
+                    <li>ရေစီးဆင်းမှုစနစ် (Deep Water Culture)</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>စိတ်ဝင်စားရာများ</h2>
+            <ul>
+                <li>စီးပွားရေးစီမံခန့်ခွဲမှု</li>
+                <li>ခေတ်မှီစိုက်ပျိုးရေးနည်းပညာများ</li>
+                <li>အားကစားနှင့် ကျန်းမာရေး</li>
+            </ul>
+        </section>
     </div>
 
     <footer>
         <div class="social-links">
-            <!-- လင့်တွေကို ကိုယ်ပိုင်အကောင့်တွေနဲ့ အစားထိုးပါ -->
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
         </div>
-        <p style="margin-top: 10px;">ဆက်သွယ်ရန်: sawsoehtet@example.com</p>
+        <p>© 2023 Saw Soe Htet Khaung. All rights reserved.</p>
     </footer>
 
     <script>
-        // JavaScript ကို ရိုးရှင်းစွာထည့်ထားပါတယ်
-        console.log("ကျေးဇူးတင်ပါတယ်! ဝဘ်ဆိုဒ်ကိုလာရောက်ကြည့်ရှုတဲ့အတွက်");
-        
-        // Table row တွေကို hover လုပ်လို့ရအောင်
-        document.querySelectorAll('tr').forEach(row => {
-            row.addEventListener('mouseover', () => {
-                row.style.backgroundColor = '#e6ffe6';
-            });
-            row.addEventListener('mouseout', () => {
-                row.style.backgroundColor = '';
-            });
-        });
+        // Simple greeting alert
+        window.onload = function() {
+            alert("ကျွန်တော်ရဲ့စာမျက်နှာကို လာရောက်ကြည့်ရှုတဲ့အတွက် ကျေးဇူးတင်ပါတယ်!");
+        }
     </script>
 </body>
 </html>
