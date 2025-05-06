@@ -1,1 +1,202 @@
-<link rel="stylesheet" href="style.css">
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f5f5f5;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Padauk', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    background-image: url('profile.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 4px solid var(--secondary-color);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Section Styles */
+section {
+    background-color: var(--white);
+    padding: 1.5rem;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* Hobbies Section */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.hobby-card {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.football {
+    background-color: #e8f4fc;
+    background-image: url('football-icon.png');
+}
+
+.hydroponic {
+    background-color: #e8f8f5;
+    background-image: url('hydroponic-icon.png');
+}
+
+.agriculture {
+    background-color: #f9f2e8;
+    background-image: url('agriculture-icon.png');
+}
+
+/* Hydroponic Section */
+.content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.hydroponic-img {
+    flex: 1;
+    min-width: 300px;
+    height: 200px;
+    background-color: #e8f8f5;
+    background-image: url('hydroponic.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.hydroponic-desc {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hydroponic-desc ul {
+    padding-left: 1.5rem;
+}
+
+.hydroponic-desc li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.facebook { background-color: #3b5998; }
+.messenger { background-color: #0084ff; }
+.email { background-color: #d44638; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-box {
+        flex-direction: column;
+    }
+    
+    .hydroponic-img, .hydroponic-desc {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
