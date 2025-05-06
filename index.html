@@ -4,93 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>စောစိုးထက်ခေါင် - အထက်တန်းကျောင်းသား</title>
-    <style>
-        body {
-            font-family: 'Padauk', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-        .section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .interests {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .interest {
-            background-color: #e8f4fc;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
-            color: #7f8c8d;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="profile-pic"></div>
         <h1>စောစိုးထက်ခေါင်</h1>
         <p>အထက်တန်းကျောင်းသား (၉တန်း) | ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
     </header>
 
-    <div class="section">
-        <h2>ကျွန်တော်အကြောင်း</h2>
-        <p>မင်္ဂလာပါ။ ကျွန်တော်နာမည်က စောစိုးထက်ခေါင်ဖြစ်ပါတယ်။ အခုအချိန်မှာ ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းမှာ ၉တန်းတက်ရောက်နေပါတယ်။ ကျောင်းစာတွေကိုလည်း အားသွန်ခွန်စိုက်လေ့လာနေသလို၊ အချိန်ရတဲ့အခါမှာလည်း ဝါသနာပါတဲ့အရာတွေကို လုပ်ကိုင်ဖြစ်ပါတယ်။</p>
-    </div>
+    <main>
+        <section class="about">
+            <h2>မိတ်ဆက်</h2>
+            <p>မင်္ဂလာပါ။ ကျွန်တော်နာမည်က စောစိုးထက်ခေါင်ဖြစ်ပါတယ်။ ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းမှာ ၉တန်းကျောင်းသားတစ်ယောက်အနေနဲ့ ပညာသင်ယူနေပါတယ်။ ကျောင်းစာတွေကိုလည်း အားသွန်ခွန်စိုက်လေ့လာနေသလို၊ အချိန်ရတဲ့အခါမှာလည်း ဝါသနာပါတဲ့အရာတွေကို လုပ်ကိုင်ဖြစ်ပါတယ်။</p>
+        </section>
 
-    <div class="section">
-        <h2>ကျွန်တော့်ဝါသနာများ</h2>
-        <div class="interests">
-            <span class="interest">ဘောလုံးကန်ခြင်း</span>
-            <span class="interest">စိုက်ပျိုးရေး</span>
-            <span class="interest">မြေမဲ့စိုက်ပျိုးနည်း (Hydroponic)</span>
-            <span class="interest">နည်းပညာ</span>
-            <span class="interest">ဝက်ဘ်ဆိုဒ်ဖန်တီးခြင်း</span>
-        </div>
-    </div>
+        <section class="hobbies">
+            <h2>ဝါသနာများ</h2>
+            <div class="hobby-grid">
+                <div class="hobby-card">
+                    <div class="icon football"></div>
+                    <h3>ဘောလုံးကန်ခြင်း</h3>
+                    <p>ဘောလုံးကိုကလေးဘဝကတည်းက ဝါသနာပါပြီး အချိန်ရတိုင်းကစားဖြစ်ပါတယ်။</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="icon hydroponic"></div>
+                    <h3>Hydroponic</h3>
+                    <p>မြေမဲ့စိုက်ပျိုးနည်းပညာကို အထူးစိတ်ဝင်စားပြီး အိမ်မှာစမ်းသပ်စိုက်ပျိုးနေပါတယ်။</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="icon agriculture"></div>
+                    <h3>စိုက်ပျိုးရေး</h3>
+                    <p>သဘာဝနည်းလမ်းတွေနဲ့ စိုက်ပျိုးရေးလုပ်ငန်းတွေကို လေ့လာနေပါတယ်။</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Hydroponic စိုက်ပျိုးနည်းအကြောင်း</h2>
-        <p>ကျွန်တော် Hydroponic (မြေမဲ့စိုက်ပျိုးနည်း) ကို အထူးစိတ်ဝင်စားပါတယ်။ ဒီနည်းပညာက မြေဆီလွှာမလိုဘဲ ရေနဲ့အာဟာရဖြေရည်ကိုသုံးပြီး အပင်တွေကိုစိုက်ပျိုးနိုင်တဲ့နည်းဖြစ်ပါတယ်။ နေရာနည်းနည်းနဲ့ ရေကိုချွေတာပြီး စိုက်ပျိုးနိုင်တာကြောင့် မြို့ပြမှာနေထိုင်သူတွေအတွက် အထူးသင့်တော်ပါတယ်။</p>
-    </div>
+        <section class="hydroponic">
+            <h2>Hydroponic စိုက်ပျိုးနည်း</h2>
+            <div class="content-box">
+                <div class="hydroponic-img"></div>
+                <div class="hydroponic-desc">
+                    <p>Hydroponic ဆိုတာက မြေဆီလွှာမသုံးဘဲ ရေနဲ့အာဟာရဖြေရည်ကိုသုံးပြီး အပင်တွေကိုစိုက်ပျိုးတဲ့နည်းပညာဖြစ်ပါတယ်။ ဒီနည်းပညာကို ကျွန်တော်အထူးစိတ်ဝင်စားပြီး အိမ်မှာ NFT စနစ်နဲ့ စမ်းသပ်စိုက်ပျိုးနေပါတယ်။</p>
+                    <ul>
+                        <li>ရေကိုချွေတာနိုင်ခြင်း</li>
+                        <li>နေရာနည်းနည်းနဲ့ အထွက်နှုန်းကောင်းခြင်း</li>
+                        <li>ပိုးမွှားရောဂါကင်းခြင်း</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>အနာဂတ်ရည်မှန်းချက်</h2>
-        <p>ကျွန်တော်ဟာ ပညာရေးကိုဆက်လက်သင်ယူပြီး အနာဂတ်မှာ စိုက်ပျိုးရေးနဲ့နည်းပညာကိုပေါင်းစပ်ထားတဲ့ အလုပ်အကိုင်မျိုးကို လုပ်ကိုင်ချင်ပါတယ်။ အထူးသဖြင့် Hydroponic နည်းပညာကို မြန်မာနိုင်ငံမှာ ပိုမိုကျယ်ပြန့်စွာအသုံးချနိုင်ဖို့ ကြိုးစားချင်ပါတယ်။</p>
-    </div>
+        <section class="goals">
+            <h2>အနာဂတ်ရည်မှန်းချက်</h2>
+            <p>ကျွန်တော်ဟာ ပညာရေးကိုဆက်လက်သင်ယူပြီး အနာဂတ်မှာ စိုက်ပျိုးရေးနဲ့နည်းပညာကိုပေါင်းစပ်ထားတဲ့ အလုပ်အကိုင်မျိုးကို လုပ်ကိုင်ချင်ပါတယ်။ အထူးသဖြင့် Hydroponic နည်းပညာကို မြန်မာနိုင်ငံမှာ ပိုမိုကျယ်ပြန့်စွာအသုံးချနိုင်ဖို့ ကြိုးစားချင်ပါတယ်။</p>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2023 စောစိုးထက်ခေါင်. All rights reserved.</p>
+        <p>© <span id="current-year"></span> စောစိုးထက်ခေါင်. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social facebook">Facebook</a>
+            <a href="#" class="social messenger">Messenger</a>
+            <a href="#" class="social email">Email</a>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
