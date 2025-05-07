@@ -194,10 +194,9 @@ footer {
     .hobby-grid {
         grid-template-columns: 1fr;
     }
-    .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #2c3e50;
-    margin-bottom: 15px;
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
 }
