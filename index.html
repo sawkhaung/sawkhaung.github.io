@@ -3,76 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>စောစိုးထက်ခေါင် - အထက်တန်းကျောင်းသား</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <title>ကျွန်တော့်အကြောင်း - တောင်ကလေးဘုန်းတော်ကြီးပညာသင်ကျောင်း</title>
+    <style>
+        body {
+            font-family: 'Padauk', 'Myanmar3', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #3498db;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2c3e50;
+            margin: 20px auto;
+            display: block;
+        }
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .interest-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="img.123.pig"></div>
-        <h1>စောစိုးထက်ခေါင်</h1>
-        <p>အထက်တန်းကျောင်းသား (၉တန်း) | ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
+        <h1>ကျွန်တော့်အကြောင်း</h1>
+        <img src="profile.jpg" alt="ကျွန်တော့်ဓာတ်ပုံ" class="profile-img">
+        <p>ကျွန်တော်က တောင်ကလေးဘုန်းတော်ကြီးပညာသင်ရေးကျောင်းမှ အထက်တန်းကျောင်းသားတစ်ယောက်ဖြစ်ပါတယ်။</p>
     </header>
 
-    <main>
-        <section class="about">
-            <h2>မိတ်ဆက်</h2>
-            <p>မင်္ဂလာပါ။ ကျွန်တော်နာမည်က စောစိုးထက်ခေါင်ဖြစ်ပါတယ်။ ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းမှာ ၉တန်းကျောင်းသားတစ်ယောက်အနေနဲ့ ပညာသင်ယူနေပါတယ်။ ကျောင်းစာတွေကိုလည်း အားသွန်ခွန်စိုက်လေ့လာနေသလို၊ အချိန်ရတဲ့အခါမှာလည်း ဝါသနာပါတဲ့အရာတွေကို လုပ်ကိုင်ဖြစ်ပါတယ်။</p>
-        </section>
+    <section>
+        <h2>ကျွန်တော့်အကြောင်း</h2>
+        <p>မင်္ဂလာပါ! ကျွန်တော်က တောင်ကလေးဘုန်းတော်ကြီးပညာသင်ရေးကျောင်းမှာ ပညာသင်ကြားနေတဲ့ အထက်တန်းကျောင်းသားတစ်ယောက်ဖြစ်ပါတယ်။ ကျောင်းစာတွေကို အာရုံစိုက်လေ့လာရတာကို ကြိုက်နှစ်သက်သလို အားကစားနဲ့ စိုက်ပျိုးရေးကိုလည်း အထူးစိတ်ဝင်စားပါတယ်။</p>
+    </section>
 
-        <section class="hobbies">
-            <h2>ဝါသနာများ</h2>
-            <div class="hobby-grid">
-                <div class="hobby-card">
-                    <div class="icon football"></div>
-                    <h3>ဘောလုံးကန်ခြင်း</h3>
-                    <p>ဘောလုံးကိုကလေးဘဝကတည်းက ဝါသနာပါပြီး အချိန်ရတိုင်းကစားဖြစ်ပါတယ်။</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="icon hydroponic"></div>
-                    <h3>Hydroponic</h3>
-                    <p>မြေမဲ့စိုက်ပျိုးနည်းပညာကို အထူးစိတ်ဝင်စားပြီး အိမ်မှာစမ်းသပ်စိုက်ပျိုးနေပါတယ်။</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="icon agriculture"></div>
-                    <h3>စိုက်ပျိုးရေး</h3>
-                    <p>သဘာဝနည်းလမ်းတွေနဲ့ စိုက်ပျိုးရေးလုပ်ငန်းတွေကို လေ့လာနေပါတယ်။</p>
-                </div>
+    <section>
+        <h2>ကျွန်တော့်ဝါသနာများ</h2>
+        <div class="interests">
+            <div class="interest-card">
+                <h3>ဘောလုံးကစားခြင်း</h3>
+                <p>ဘောလုံးကန်ရတာကို အထူးဝါသနာပါပါတယ်။ ကျောင်းအသင်းနဲ့ ကစားရတာ၊ သူငယ်ချင်းတွေနဲ့အတူ ဘောလုံးပြိုင်ပွဲဝင်ရတာတွေကို အရမ်းနှစ်သက်ပါတယ်။</p>
             </div>
-        </section>
-
-        <section class="hydroponic">
-            <h2>Hydroponic စိုက်ပျိုးနည်း</h2>
-            <div class="content-box">
-                <div class="hydroponic-img"></div>
-                <div class="hydroponic-desc">
-                    <p>Hydroponic ဆိုတာက မြေဆီလွှာမသုံးဘဲ ရေနဲ့အာဟာရဖြေရည်ကိုသုံးပြီး အပင်တွေကိုစိုက်ပျိုးတဲ့နည်းပညာဖြစ်ပါတယ်။ ဒီနည်းပညာကို ကျွန်တော်အထူးစိတ်ဝင်စားပြီး အိမ်မှာ NFT စနစ်နဲ့ စမ်းသပ်စိုက်ပျိုးနေပါတယ်။</p>
-                    <ul>
-                        <li>ရေကိုချွေတာနိုင်ခြင်း</li>
-                        <li>နေရာနည်းနည်းနဲ့ အထွက်နှုန်းကောင်းခြင်း</li>
-                        <li>ပိုးမွှားရောဂါကင်းခြင်း</li>
-                    </ul>
-                </div>
+            <div class="interest-card">
+                <h3>စိုက်ပျိုးရေး</h3>
+                <p>စိုက်ပျိုးရေးလုပ်ငန်းတွေကို စိတ်ဝင်စားပြီး အထူးသဖြင့် မြေမဲ့စိုက်ပျိုးနည်း (Hydroponic) နည်းပညာကို အရမ်းစိတ်ဝင်စားပါတယ်။</p>
             </div>
-        </section>
+            <div class="interest-card">
+                <h3>နည်းပညာ</h3>
+                <p>ကွန်ပျူတာနည်းပညာတွေ၊ အထူးသဖြင့် ဝက်ဘ်ဒီဇိုင်းနဲ့ ပရိုဂရမ်းမင်းကိုလည်း စိတ်ဝင်စားပါတယ်။</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="goals">
-            <h2>အနာဂတ်ရည်မှန်းချက်</h2>
-            <p>ကျွန်တော်ဟာ ပညာရေးကိုဆက်လက်သင်ယူပြီး အနာဂတ်မှာ စိုက်ပျိုးရေးနဲ့နည်းပညာကိုပေါင်းစပ်ထားတဲ့ အလုပ်အကိုင်မျိုးကို လုပ်ကိုင်ချင်ပါတယ်။ အထူးသဖြင့် Hydroponic နည်းပညာကို မြန်မာနိုင်ငံမှာ ပိုမိုကျယ်ပြန့်စွာအသုံးချနိုင်ဖို့ ကြိုးစားချင်ပါတယ်။</p>
-        </section>
-    </main>
+    <section>
+        <h2>Hydroponic စိုက်ပျိုးနည်း အကြောင်း</h2>
+        <p>မြေမဲ့စိုက်ပျိုးနည်း (Hydroponic) ဆိုတာက မြေဆီလွှာကိုမသုံးဘဲ ရေနဲ့အာဟာရဓာတ်ပျော်ရည်တွေကိုသုံးပြီး အပင်တွေကိုစိုက်ပျိုးတဲ့နည်းပညာဖြစ်ပါတယ်။ ဒီနည်းပညာက နေရာနည်းနည်းနဲ့ ရေကိုချွေတာပြီး အထွက်နှုန်းကောင်းကောင်းရနိုင်တာကြောင့် ကျွန်တော်အထူးစိတ်ဝင်စားပါတယ်။</p>
+        <p>ကျွန်တော်ကိုယ်တိုင်လည်း Hydroponic စနစ်နဲ့ ဟင်းသီးဟင်းရွက်လေးတွေ စမ်းစိုက်ကြည့်ဖို့ စီစဉ်နေပါတယ်။</p>
+    </section>
 
     <footer>
-        <p>© <span id="current-year"></span> စောစိုးထက်ခေါင်. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#" class="social facebook">Facebook</a>
-            <a href="#" class="social messenger">Messenger</a>
-            <a href="#" class="social email">Email</a>
-        </div>
+        <p>© 2023 တောင်ကလေးဘုန်းတော်ကြီးပညာသင်ကျောင်း. All rights reserved.</p>
+        <p>ကျေးဇူးပြု၍ ဆက်သွယ်လိုပါက: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
